@@ -5,22 +5,19 @@
 //  Created by Ahmed Tantawy on 07/04/2021.
 //
 
-import UIKit
 import MapKit
-class Capital: NSObject , MKAnnotation{
-    var coordinate: CLLocationCoordinate2D
+import UIKit
+
+class Capital: NSObject, MKAnnotation {
     var title: String?
-    var info : String?
-    
-    
-    init(title : String , coordinate : CLLocationCoordinate2D ,info : String ) {
+    var coordinate: CLLocationCoordinate2D
+    var info: String
+    var wikiName: String
+
+    init(title: String, coordinate: CLLocationCoordinate2D, info: String, wikiName: String? = nil) {
         self.title = title
-        self.info = info
         self.coordinate = coordinate
+        self.info = info
+        self.wikiName = wikiName ?? title
     }
-    
-    
-    
-    
-    
 }
